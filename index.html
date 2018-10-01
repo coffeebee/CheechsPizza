@@ -10,37 +10,40 @@
 <body>    
     <h1>Cheech's Pizza</h1>
     <article>			
-			<h2>Contact Us</h2>			
-			<form>
-				<fieldset>					
-					<label for="fname">First Name: </label> 
-					<input id="fname" type="text" spellcheck="true" required />
-					<br />	<br/>			
-					<label for="lname">Last Name: </label> 
-					<input id="lname" type="text" required />
-					<br />	<br/>	
-					<label for="phone">Phone Number: </label>
-					<input id="phone" type="tel" required />
-                    <br/>	<br/>
+		<h2>Order Sheet</h2>			
+		<form>
+			<fieldset>					
+                <label for="name">Name:       </label>
+                <textarea id="orderInfoName" rows="1" cols="35" required>Type your name please.</textarea>
+                <br/>	<br/>	
+                <label for="number">Phone Number: </label>
+                <textarea id="orderInfoNumber" rows="1" cols="35" required>Type call-back number.</textarea>
+                <br/>	<br/>										
                     					
-					<label for="selectList">Choose Your Pizza: </label>
-					<select id="selectList" required>
-						<option value="">Choose</option>
-						<option value="PizzaChoice" >Pizza Choice</option>
-						<option value="" ></option>
-						<option value="" >TV </option>
-						<option value="" ></option>
-                    </select>                    
+				<label for="selectList">Choose Your Pizza: </label>
+				<select id="selectList" required>
+                    <!--
+                    select list insides
+                    
+                    <option value="">Choose</option>
+                    <option value="PizzaChoice" >Pizza Choice</option>
+                
+                    -->					
+                </select>    
+                <br/>	                
 										
-				</fieldset>	
+			</fieldset>	
 				
-				<button type="submit" onclick = "A FUNCTION To DISPLAY ORDER"   >Submit</button>
-				<button type="reset">Reset</button>
-				<br/>	<br/>	
+			<button type="submit" onclick = "A FUNCTION To DISPLAY ORDER">Complete Order</button>
+			<button type="reset">Reset</button>
+			<br/>	<br/>	
 				
-			</form>
-		</article>
+		</form>
+	</article>
 
+    <div id="review" onclick = "ANOTHER FUNCTION TO DISPLAY STUFF">
+        <!--Display order summary here-->
+    </div>
 
 </body>
 </html>
