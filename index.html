@@ -16,10 +16,27 @@
                 <br/>	<br/>	
                 <label for="number">Phone Number: </label>
                 <textarea id="orderInfoNumber" rows="1" cols="35" required>Type call-back number.</textarea>
-                <br/>	<br/>										
+                <br/>	<br/>	
+                
+                <label for="howMany">How Many? </label>
+				<select id="howMany" onclick = getHowMany()  required>
+                    
+                    <option value="0">0</option>
+                    <option value="1" >1</option>
+                    <option value="2">2</option>
+                    <option value="3" >3</option>
+                    <option value="4">4</option>
+                    <option value="5" >5</option>
+                    <option value="6">6</option>
+                    <option value="7" >7</option>
+                    <option value="8">8</option>
+                    <option value="9" >9</option>
+                    <option value="10">10</option>                
                     					
-				<label for="selectList">Choose Your Pizza: </label>
-				<select id="selectList" required>
+                </select>           
+                    					
+				<label for="pizzaList">Choose Your Pizza: </label>
+				<select id="pizzaList" required>
                     <!--
                     select list insides
                     
@@ -32,24 +49,16 @@
 										
 			</fieldset>	
 				
-			<button type="submit" onclick = "A FUNCTION To DISPLAY ORDER">Complete Order</button>
+			<button type="submit" onclick = completeOrder()>Complete Order</button>
 			<button type="reset">Reset</button>
 			<br/>	<br/>	
 				
-<<<<<<< HEAD
 		</form>
 	</article>
 
-    <div id="review" onclick = "ANOTHER FUNCTION TO DISPLAY STUFF">
+    <div id="review">
         <!--Display order summary here-->
     </div>
 
 </body>
 </html>
-=======
-			</form>
-        </article>
-        <script src="script.js"></script>
- </body>
-</html> 
->>>>>>> 3d32307c8256c0078fc4b33bf9650df789698829
