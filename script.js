@@ -4,6 +4,9 @@ function completeOrder(){
     document.getElementById()
 }
 
+
+
+
 //howMany
 for(let i = 0; i<pics.length; i++){
     document.getElementById('howMany').innerHTML += `<option value="'${i}'" >'${i}'</option>`;              
@@ -22,3 +25,4 @@ function getHowMany(i){
 function displaySummary(){
 
 }
+//
