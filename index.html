@@ -13,55 +13,45 @@
 		<h2>Order Sheet</h2>			
 		<form>
 			<fieldset>					
-                <label for="name">Name:       </label>
-                <textarea id="orderInfoName" rows="1" cols="35" required>Type your name please.</textarea>
-                <br/>	<br/>	
-                <label for="number">Phone Number: </label>
-                <textarea id="orderInfoNumber" rows="1" cols="35" required>Type call-back number.</textarea>
+                <label for="name">Name:</label> <!--get name for order-->
+                <textarea id="orderInfoName" rows="1" cols="35" required placeholder="Type your name please."></textarea>
+                <br/>	<br/>
+
+                <label for="number">Phone Number:</label><!--get phone # for order-->
+                <textarea id="orderInfoNumber" rows="1" cols="35" required placeholder="Type call-back number."></textarea>
                 <br/>	<br/>	
                 
-                <label for="howMany">How Many? </label>
-				<select id="howMany" onclick = getHowMany()  required>
-                    
-                    <option value="0">0</option>
-                    <option value="1" >1</option>
-                    <option value="2">2</option>
-                    <option value="3" >3</option>
-                    <option value="4">4</option>
-                    <option value="5" >5</option>
-                    <option value="6">6</option>
-                    <option value="7" >7</option>
-                    <option value="8">8</option>
-                    <option value="9" >9</option>
-                    <option value="10">10</option>                
-                    					
-                </select>           
-                    					
+                <label for="howMany">How Many? </label>        
+                </select>
+                <!--quantity of pizzas-->
+                <input type="number" id="qnty" min="1" max="10" value="1">
+                <!--type of pizza-->
 				<label for="pizzaList">Choose Your Pizza: </label>
-				<select id="pizzaList" required>
-                    <!--
-                    select list insides
-                    
-                    <option value="">Choose</option>
-                    <option value="PizzaChoice" >Pizza Choice</option>
-                -->
+				<select id="pizzasDrpdn" required>
                 </select>    
                 <br/>	                
 							
             </fieldset>	
            
-				
-			<button type="submit" onclick = completeOrder()>Complete Order</button>
-			<button type="reset">Reset</button>
+            <!--submit order-->
+            <button onclick="completeOrder()">Complete Order</button>
+            <!--clear order-->
+			<button onclick="reloadPage()">Reset</button>
 			<br/>	<br/>	
 				
 
 		</form>
 	</article>
 
+    <!--displays order summary-->
     <div id="review">
-        <!--Display order summary here-->
+        <p id="name"></p>
+        <p id="order"></p>
+        <p id="subTotal"></p>
+        <p id="taxTotal"></p>
+        <p id="finalTotal"></p>
+        <p id="contact"></p>
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html> 

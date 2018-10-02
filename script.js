@@ -1,28 +1,31 @@
-pizzaTypes = ["Mediteranian", "Alfredo", "Supreme", "Meatlovers", "Chicken Bacon Ranch"]
-pizzaCosts = [ 8.25, 5.75, 6.50, 7.85, 10.85]
+pizzaTypes = ["Mediteranian", "Alfredo", "Supreme", "Meatlovers", "Chicken Bacon Ranch"];
+pizzaCosts = [8.25, 5.75, 6.50, 7.85, 10.85];
 function completeOrder(){
-    document.getElementById()
+    name = document.getElementById("orderInfoName").value;
+    phone = document.getElementById("orderInfoNumber").value;
+    type = document.getElementById("pizzasDrpdn").value;
+    quantity = document.getElementById("qnty").value;
+    sub = pizzaCosts[type] * quantity;
+    total = sub + (sub * 0.076);
+    tax = total - sub; 
+    document.getElementById("name").innerHTML = `Thank you ${name} for choosing Cheech's Pizza`;
+    document.getElementById("order").innerHTML = `Your order is ${quantity} ${pizzaTypes[type]} pizzas`;
+    document.getElementById("subTotal").innerHTML = `Subtotal: $${sub.toFixed(2)}`;
+    document.getElementById("taxTotal").innerHTML = `Tax: $${tax.toFixed(2)}`;
+    document.getElementById("finalTotal").innerHTML = `Total: $${total.toFixed(2)}`;
+    document.getElementById("contact").innerHTML = `A call will be made to ${phone} when your order is ready`;
+    event.preventDefault();
 }
-
-
-
-
-//howMany
-for(let i = 0; i<pics.length; i++){
-    document.getElementById('howMany').innerHTML += `<option value="'${i}'" >'${i}'</option>`;              
+function reloadPage(){
+    location.reload();
 }
-
-//pizza list?
-for(let i = 0; i<pics.length; i++){
-    document.getElementById('pizzaList').innerHTML += `<option value="'${PizzaChoice}'" >'${PizzaChoice}'</option>`;              
+function pizzaType(){
+    for (i = 0;i < pizzaTypes.length; i++){
+        var addPizza = document.getElementById("pizzasDrpdn");
+        var option = document.createElement("option");
+        option.text = `${pizzaTypes[i]} $${pizzaCosts[i]}`
+        option.value = i
+        addPizza.add(option)
+    }
 }
-
-
-function getHowMany(i){    
-   
-}
-
-function displaySummary(){
-
-}
-//
+pizzaType()
