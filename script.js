@@ -1,6 +1,6 @@
 pizzaTypes = ["Mediteranian", "Alfredo", "Supreme", "Meatlovers", "Chicken Bacon Ranch"];
 pizzaCosts = [8.25, 5.75, 6.50, 7.85, 10.85];
-function completeOrder(){
+document.getElementById("submit").addEventListener("click", function(){
     name = document.getElementById("orderInfoName").value;
     phone = document.getElementById("orderInfoNumber").value;
     type = document.getElementById("pizzasDrpdn").value;
@@ -15,7 +15,7 @@ function completeOrder(){
     document.getElementById("finalTotal").innerHTML = `Total: $${total.toFixed(2)}`;
     document.getElementById("contact").innerHTML = `A call will be made to ${phone} when your order is ready`;
     event.preventDefault();
-}
+})
 function reloadPage(){
     location.reload();
 }
