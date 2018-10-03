@@ -9,7 +9,13 @@ document.getElementById("submit").addEventListener("click", function(){
     total = sub + (sub * 0.076);
     tax = total - sub; 
     document.getElementById("name").innerHTML = `Thank you ${name} for choosing Cheech's Pizza`;
-    document.getElementById("order").innerHTML = `Your order is ${quantity} ${pizzaTypes[type]} pizzas`;
+    if (quantity == 1){
+        document.getElementById("order").innerHTML = `Your order is ${quantity} ${pizzaTypes[type]} pizza`;
+
+    }
+    else{
+        document.getElementById("order").innerHTML = `Your order is ${quantity} ${pizzaTypes[type]} pizzas`;
+    }
     document.getElementById("subTotal").innerHTML = `Subtotal: $${sub.toFixed(2)}`;
     document.getElementById("taxTotal").innerHTML = `Tax: $${tax.toFixed(2)}`;
     document.getElementById("finalTotal").innerHTML = `Total: $${total.toFixed(2)}`;
