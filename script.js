@@ -29,7 +29,7 @@ function pizzaType(){
     for (i = 0;i < pizzaTypes.length; i++){
         var addPizza = document.getElementById("pizzasDrpdn");
         var option = document.createElement("option");
-        option.text = `${pizzaTypes[i]} $${pizzaCosts[i]}`
+        option.text = `${pizzaTypes[i]} $${pizzaCosts[i].toFixed(2)}`
         option.value = i
         addPizza.add(option)
     }
