@@ -1,5 +1,5 @@
 # CheechsPizza
 Our Pizza Place
-#Chester Heitman
-#Isaac Hoffman
-#Sarah Dabbs
+Chester Heitman
+Isaac Hoffman
+Sarah Dabbs
